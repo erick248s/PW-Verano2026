@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <meta charset="UTF-8">
+       <title>Ejercicio 2</title>
+    </head>
+    <body>
+       <h1 id="encabezados">The Beatles</h1>
+       <p>
+         Fue una legendaria banda de rock británica formada en Liverpool en 1960, integrada por John Lennon, Paul McCartney, George Harrison y Ringo Starr. Reconocida como la agrupación más influyente y exitosa en la historia de la música popular, el cuarteto transformó la producción musical de los años 60 y lideró la contracultura de su época con álbumes revolucionarios como Sgt. Pepper's Lonely Hearts Club Band y Abbey Road.
+       </p>
+       <h2>Índice</h2>
+       <ol>
+           <li><a href="#fotografia">Fotografía del grupo</a></li>
+           <li><a href="#integrantes">Integrantes</a></li>
+           <li><a href="#discografia">Discografía</a></li>
+           <li><a href="#enlaces">Enlaces</a></li>
+       </ol>
+       <h2 id = "fotografia">Fotografía del grupo</h2>
+       <img width="300" src="https://www.postery.com/__media-service/img/product/813/4227-the-beatles-1.jpg" alt="Imagen del grupo musical">
+       <h2 id = "integrantes">Integrantes</h2>
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <th>Instrumento</th>
+                
+            </tr>
+            <tr>
+                <td>John Lennon</td>
+                <td>Guitarra y voz</td>
+            </tr>
+             <tr>
+                <td>Paul McCartney</td>
+                <td>Bajo y voz</td>
+            </tr>
+                <tr>
+                <td>George Harrison</td>
+                <td>Guitarra solista y voz</td>
+            </tr>
+                <tr>
+                <td>Ringo Starr</td>
+                <td>Batería y voz</td>
+            </tr>
+        </table> 
+       <h2 id = "discografia">Discografía</h2>
+         <table border="1">
+            <tr>
+                <th>Titulo</th>
+                <th>Año</th>
+                
+            </tr>
+            <tr>
+                <td>Please Please Me</td>
+                <td>1963</td>
+            </tr>
+             <tr>
+                <td>Help!</td>
+                <td>1965</td>
+            </tr>
+             <tr>
+                <td>Rubber Soul</td>
+                <td>1965</td>
+            </tr>
+             <tr>
+                <td>Revolver</td>
+                <td>1966</td>
+            </tr>
+             <tr>
+                <td>Sgt. Pepper's Lonely Hearts Club Band</td>
+                <td>1967</td>
+            </tr>
+             <tr>
+                <td>Abbey Road</td>
+                <td>1969</td>
+            </tr>
+             <tr>
+                <td>Let It Be</td>
+                <td>1970</td>
+            </tr>
+        </table> 
+       <h2 id = "enlaces">Enlaces</h2>
+        <ul>
+           <li><a href="https://www.thebeatles.com" target="_blank">Sitio Oficial</a></li>
+           <li><a href="https://es.wikipedia.org/wiki/The_Beatles" target="_blank">Wikipedia</a></li>
+           <li><a href="https://play.google.com/store/apps/details/Spotify_Music_and_Podcasts?id=com.spotify.tv.android&hl=es_MX" target="_blank">Playstore</a></li>
+       </ul>
+       <p>Todos los derechos reservados.</p>
+    </body>
+</html> 
