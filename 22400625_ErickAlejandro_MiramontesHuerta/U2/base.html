@@ -3,7 +3,104 @@
     <head>
        <meta charset="UTF-8">
        <title>Estructura Base</title>
-       <link rel="stylesheet" href="/U3/estilos.css">
+       <!--Estilos con la etiqueta Style en head-->
+       <style>
+           body{
+               font-family: Arial, Helvetica, sans-serif;
+               background: #f4f6f8;
+               color: #333;
+               margin: 0;
+               padding: 20px;
+            }
+            
+            div,form,table{
+               background: white;
+               padding: 15px;
+               margin-bottom: 20px;
+               border-radius: 8px;
+            }
+
+            h1,h2,h3,h4,h5,h6{
+                color: rgb(23, 123, 144);
+            }
+
+            img{
+                width:250px;
+                border-radius: 10px;
+                display: block;
+                margin: auto;
+            }
+            ul,ol{
+                padding-left: 30px;
+            }
+
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            
+            th{
+                background: #10797c;
+                color: white;
+                padding: 10px;   
+            }
+            
+            td{
+                padding: 10px;
+            }
+            
+            a{
+                color:#10797c;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            
+            a:hover{
+               text-decoration: underline;
+               color:blue;
+            }
+
+            fieldset{
+                border:2px solid #0b5ed7;
+                border-radius: 10px;
+            }
+            
+            legend{
+                font-weight: bold;
+                padding: 10px;
+                color:#0b5ed7;
+            }
+
+            label{
+                font-weight: bold;
+            }
+
+            input,select,textarea{
+               margin-top: 5px;
+               padding: 8px;
+               border: 1px solid #7e0e0e;
+               border-radius: 5px;
+            }
+
+            .boton{
+                background: #0b5ed7;
+                color: white;
+            }
+
+            input [type="submit"],[type="reset"]{
+                background: #0b5ed7;
+                color: white;
+                border: none;
+            }
+            input[type="reset"]{
+                background: #6c757d;
+            }
+
+             input[type="submit"]:hover{
+                background: #6c757d;
+            }
+       </style>
     </head>
     <body>
        <h3 id="encabezados" style="color: rgb(153, 0, 255); background: black; width: 50%; text-align: center;">Encabezados</h3>
@@ -26,7 +123,7 @@
            <li>Elemento de lista 2</li>
            <li>Elemento de lista 3</li>
        </ul>
-       <h3>Listas Ordenadas</h3>
+       <h3>Listas Ordenadas</h3>  
        <ol>
            <li>Elemento de lista 1</li>
            <li>Elemento de lista 2</li>
@@ -99,7 +196,9 @@
               <label>Archivo</label><br>
                 <input type="file">
               <br><br>
-                <input type="submit">  
+                <!--Botones-->
+                <input type="submit" value="Enviar">  
+                <input type="reset" value="Limpiar" >  
             </fieldset>
         </form>
 
