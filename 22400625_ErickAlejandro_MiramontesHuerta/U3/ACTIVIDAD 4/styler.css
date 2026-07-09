@@ -1,0 +1,242 @@
+/* =========================================
+   ESTILOS GENERALES
+========================================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f0f2f5;
+    font-family:Arial, Helvetica, sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.contenedor-main{
+    width:980px;
+    display:grid;
+    grid-template-columns:1fr 396px;
+    align-items:center;
+    column-gap:90px;
+}
+
+/* =========================================
+   LADO IZQUIERDO
+========================================= */
+
+.contenido-encabezado{
+    text-align:left;
+}
+
+.logo{
+    color:#1877f2;
+    font-size:60px;
+    font-weight:bold;
+    letter-spacing:-2px;
+    margin-bottom:12px;
+}
+
+.texto{
+    width:500px;
+}
+
+.texto p{
+    font-size:28px;
+    line-height:32px;
+    color:#1c1e21;
+}
+
+/* =========================================
+   TARJETA
+========================================= */
+
+table{
+    width:396px;
+    background:#fff;
+    border-radius:8px;
+    padding:16px;
+    border-spacing:0 14px;
+    box-shadow:0 2px 12px rgba(0,0,0,.18);
+}
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+td{
+    border:1px solid #dddfe2;
+    border-radius:6px;
+    padding:15px;
+    font-size:17px;
+    color:#8a8d91;
+}
+
+/* =========================================
+   BOTÓN AZUL
+========================================= */
+
+.boton{
+    background:#0866ff;
+    color:white;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    border:none;
+}
+
+/* =========================================
+   ENLACE
+========================================= */
+
+.olvida{
+    border:none;
+    text-align:center;
+    padding:0;
+}
+
+.olvida a{
+    color:#1877f2;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.olvida a:hover{
+    text-decoration:underline;
+}
+
+hr{
+    border:none;
+    border-top:1px solid #dadde1;
+    margin-top:20px;
+}
+
+/* =========================================
+   BOTÓN VERDE
+========================================= */
+
+.btn-cont-crear{
+    text-align:center;
+}
+
+.btn-crear{
+    background:#42b72a;
+    color:white;
+    border:none;
+    display:inline-block;
+    border-radius:6px;
+    padding:15px 22px;
+    font-size:17px;
+    font-weight:bold;
+}
+
+/* =========================================
+   TEXTO INFERIOR
+========================================= */
+
+.texto2{
+    text-align:center;
+    font-size:14px;
+    margin-top:25px;
+    color:#1c1e21;
+    line-height:20px;
+}
+/*==========================================
+TAMAÑO DE PANTALLA
+===========================================*/
+
+@media (max-width:990px){
+
+    .contenedor-main{
+        width:100%;
+        grid-template-columns:1fr;
+        row-gap:35px;
+    }
+
+    .contenido-encabezado{
+        text-align:center;
+    }
+
+    .texto{
+        width:100%;
+        max-width:500px;
+        margin:auto;
+    }
+
+    .texto p{
+        text-align:left;
+        font-size:24px;
+    }
+
+    table{
+        margin:auto;
+    }
+
+}
+
+@media (max-width:700px){
+
+    .contenedor-main{
+        width:100%;
+        grid-template-columns:1fr;
+        row-gap:35px;
+    }
+
+    .contenido-encabezado{
+        text-align:center;
+    }
+
+    .texto{
+        width:100%;
+        max-width:500px;
+        margin:auto;
+    }
+
+    .texto p{
+        text-align:left;
+        font-size:24px;
+    }
+
+    table{
+        margin:auto;
+    }
+
+}
+
+@media (max-width:500px){
+
+    .contenedor-main{
+        width:100%;
+        grid-template-columns:1fr;
+        row-gap:35px;
+    }
+
+    .contenido-encabezado{
+        text-align:center;
+    }
+
+    .texto{
+        width:100%;
+        max-width:500px;
+        margin:auto;
+    }
+
+    .texto p{
+        text-align:left;
+        font-size:24px;
+    }
+
+    table{
+        margin:auto;
+    }
+
+}
