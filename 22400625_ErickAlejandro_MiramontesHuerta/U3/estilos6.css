@@ -1,0 +1,224 @@
+/* Reseteo básico y configuración del fondo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Diseño principal de dos columnas */
+.contenedor-main {
+    display: flex;
+    flex: 1; /* Ocupa todo el espacio disponible antes del footer */
+    width: 100%;
+}
+
+.seccion-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-logo img {
+    width: 100%;
+    max-width: 450px; /* Tamaño aproximado del logo de X */
+}
+
+.seccion-formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Tipografía de la sección del formulario */
+.seccion-formulario h1 {
+    font-size: 50px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+}
+
+.seccion-formulario h4 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.seccion-formulario h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos de botones generales */
+button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 20px;
+    border-radius: 9999px; /* Borde en forma de píldora */
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    transition: background-color 0.2s ease;
+}
+
+.btn-blanco {
+    background-color: white;
+    color: black;
+    border: 1px solid transparent;
+}
+
+.btn-blanco:hover {
+    background-color: #e6e6e6;
+}
+
+.btn-azul {
+    background-color: #1d9bf0;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+.btn-azul:hover {
+    background-color: #1a8cd8;
+}
+
+.btn-negro {
+    background-color: black;
+    color: #1d9bf0;
+    border: 1px solid #536471;
+}
+
+.btn-negro:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+}
+
+button img {
+    width: 18px;
+}
+
+/* Divisor de "o" */
+.divisor {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+    color: #e7e9ea;
+    font-size: 0.9rem;
+}
+
+.divisor::before,
+.divisor::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #2f3336;
+}
+
+.divisor::before { margin-right: 10px; }
+.divisor::after { margin-left: 10px; }
+
+/* Texto de términos de servicio */
+.terminos {
+    font-size: 0.7rem;
+    color: #71767b;
+    max-width: 300px;
+    line-height: 1.3;
+    margin-top: 5px;
+}
+
+.txt-azul {
+    color: #1d9bf0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.txt-azul:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página (Footer) */
+.pie-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+    row-gap: 5px;
+    column-gap: 12px;
+}
+
+.pie-pagina a, .pie-pagina span {
+    color: #71767b;
+    text-decoration: none;
+    font-size: 9px;
+}
+
+.pie-pagina a:hover {
+    text-decoration: underline;
+}
+
+/* Diseño Responsivo para móviles */
+@media (max-width: 900px) {
+    .contenedor-main {
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 15px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .seccion-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .seccion-logo .logo {
+        max-width: 250px;
+    }
+    
+    .seccion-formulario h1 {
+        font-size: 30px;
+    }
+
+    .seccion-formulario {
+        width: 100%;
+        padding: 20px 0;
+        align-items: center; /* Centra los botones y el divisor horizontalmente */
+        text-align: center; /* Centra los textos pequeños (h3, h4, p) */
+    }
+
+    .seccion-formulario h1 {
+        font-size: 35px;
+        text-align: center; /* Sobrescribe el text-align: left del escritorio */
+        margin-bottom: 2rem;
+    }
+    
+    /* Aseguramos que los textos de términos también se centren correctamente */
+    .terminos {
+        text-align: center;
+    }
+}
