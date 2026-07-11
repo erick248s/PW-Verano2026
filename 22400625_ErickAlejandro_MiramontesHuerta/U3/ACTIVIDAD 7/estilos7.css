@@ -1,0 +1,568 @@
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #333; /* Color de fondo oscuro por si la imagen tarda en cargar */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* SECCION 1 (Fondo de pantalla completa) */
+.seccion1 {
+    /* Sintaxis: color url("ruta") repetición posición / tamaño */
+    background: #333 url('assets/main-hero-background.png') no-repeat center / cover;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* NAVEGACIÓN SUPERIOR */
+.nav-superior {
+    display: flex;
+    justify-content: flex-end; /* Empuja el botón a la derecha */
+    width: 100%;
+    padding: 10px 0;
+}
+
+.btn-iniciar {
+    color: #fff;
+    text-decoration: none;
+    background: #121617;
+    padding: 7px 18px;
+    margin-right: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+.btn-iniciar:hover {
+    background: white;
+    color: black;
+}
+
+/* CONTENIDO PRINCIPAL */
+.enc-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante y se centre verticalmente */
+    max-width: 885px; /* Limita el ancho para que el texto baje de línea como en la imagen */
+    padding-left: 25px;
+    padding-top: 40px;
+}
+
+.disney {
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 35px; /* Tamaño ajustado para coincidir con tu imagen de referencia */
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    line-height: 1.2;
+}
+
+/* FORMULARIO (Input + Botón) */
+.formulario {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.inp-txt {
+    background: #27292E;
+    padding: 16px 20px;
+    border-radius: 4px 0 0 4px; /* Bordes redondeados solo a la izquierda */
+    color: white;
+    border: 1px solid #444;
+    border-right: none;
+    flex-grow: 1; /* El input toma el espacio sobrante */
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-sub {
+    background: #55DDF6;
+    padding: 16px 30px;
+    border-radius: 0 4px 4px 0; /* Bordes redondeados solo a la derecha */
+    color: black;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.inp-txt::placeholder {
+    color: white;
+    opacity: 1; /* Algunos navegadores hacen que el placeholder sea un poco transparente, esto asegura que sea blanco sólido */
+}
+
+.enc-text {
+    color: #fff;
+    font-size: 13px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.txt-blanco{
+    font-weight: bold;
+}
+
+.logos-marcas {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+/* ========================
+   SECCIÓN 2
+   ======================== */
+
+.seccion2 {
+    background-color: #000000;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center; /* Centra el bloque central en la pantalla */
+}
+
+/* Este contenedor mantiene el texto y la imagen del mismo ancho */
+.contenedor-central {
+    width: 100%;
+    max-width: 800px; /* Puedes subir o bajar este número si quieres la imagen más grande o chica */
+}
+
+/* Acomodo del texto superior */
+.textos-superiores {
+    text-align: left; /* Alineado a la izquierda */
+    margin-bottom: 30px;
+}
+
+.textos-superiores h2 {
+    color: white;
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
+}
+
+.textos-superiores p {
+    color: #a0a0a0;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Contenedor con la imagen de fondo */
+.imagen-fondo {
+    /* Aquí pones tu imagen de fondo */
+    background-image: url('assets/starwars.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 600px; /* IMPORTANTE: Al ser un background, requiere una altura fija */
+    
+    /* Flexbox nos ayuda a acomodar el texto blanco adentro */
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+}
+
+/* Texto sobre la imagen */
+.imagen-fondo h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 5%; /* Lo separa un poco del borde izquierdo de la imagen */
+    margin: 0;
+    /* Le ponemos una sombra fuerte para que se lea claro sobre cualquier fondo */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); 
+}
+
+/* ========================
+   SECCIÓN 3
+   ======================== */
+
+.seccion3 {
+    background-color: #000000;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor de todas las películas en fila */
+.contenedor-carrusel {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Separación entre cada película */
+    max-width: 1200px;
+    width: 100%;
+    /* Si la pantalla es pequeña, permitirá deslizar hacia los lados */
+    overflow-x: auto; 
+    padding-bottom: 20px;
+}
+
+/* Cada tarjeta individual */
+.tarjeta {
+    position: relative; /* Clave para poder acomodar el número encima de la foto */
+    width: 20vh; /* Ancho fijo para cada póster */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0; /* Evita que las tarjetas se aplasten si no caben */
+    cursor: pointer;
+}
+
+/* Imagen del póster */
+.tarjeta img {
+    width: 100%;
+    margin: 0;
+    height: px; /* Le damos una altura estándar a todas */
+    object-fit: fill; /* Recorta un poco si es necesario para que todas midan igual */
+    border-radius: 6px;
+    display: block;
+    transition: 0.3s;
+    
+}
+
+/* Efecto al pasar el mouse (Opcional, pero se ve genial) */
+.tarjeta:hover img {
+    transform: scale(1.05);
+}
+
+/* Texto debajo del póster */
+.tarjeta p {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* --- ESTILOS DEL NÚMERO (El detalle del triángulo) --- */
+
+.fondo-triangulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+}
+
+/* ========================
+   SECCIÓN 4 (Planes)
+   ======================== */
+
+.seccion4 {
+    background-color: #040714; /* Fondo azul muy oscuro casi negro */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.contenedor-planes {
+    max-width: 1050px;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor-planes h2 {
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
+}
+
+.contenedor-planes p {
+    color: #c0c0c0;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+/* Envoltura para hacer la tabla amigable con móviles */
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Estilos generales de la tabla */
+/* Estilos generales de la tabla */
+.tabla-precios {
+    width: 100%;
+    border-collapse: separate; /* Permite usar border-radius */
+    border-spacing: 0; /* Mantiene las celdas juntas */
+    text-align: center;
+    border: 1px solid #2a2a2a; /* Borde exterior de la tabla */
+    border-radius: 12px; /* ¡AQUÍ ESTÁ EL REDONDEO! */
+    overflow: hidden; /* Corta mágicamente cualquier fondo que se salga de las esquinas */
+}
+
+/* Celdas y bordes internos */
+.tabla-precios th, 
+.tabla-precios td {
+    padding: 25px 15px;
+    border-bottom: 1px solid #2a2a2a; /* Solo ponemos borde abajo */
+    border-right: 1px solid #2a2a2a;  /* y a la derecha */
+}
+
+/* Limpieza: Quitamos los bordes del extremo derecho para que no choquen con el borde exterior */
+.tabla-precios th:last-child, 
+.tabla-precios td:last-child {
+    border-right: none;
+}
+
+/* Limpieza: Quitamos el borde de abajo a la última fila para que no choque con el borde exterior */
+.tabla-precios tbody tr:last-child td {
+    border-bottom: none;
+}
+.cabecera-anuncios {
+    border-top-right-radius: 8px;
+}
+/* Cabeceras de colores */
+.cabecera-premium {
+    width: 19%;
+    background-color: #437cf8; /* Azul Disney */
+    border-radius: 8px 8px 8px 8px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.cabecera-estandar, 
+.cabecera-anuncios {
+    width: 19%;
+    background-color: #1a1a1a;
+    border-radius: 8px 8px 8px 8px;
+    font-size: 0.9rem;
+}
+
+/* Fila de los precios */
+.fila-precios td {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Textos de la izquierda en las filas */
+.texto-caracteristica {
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+/* Iconos de la tabla */
+.check {
+    color: #00e676; /* Verde para la palomita */
+    font-size: 1.4rem;
+}
+
+.guion {
+    color: #ff3b30; /* Rojo para el guion */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.texto-centro {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* ========================
+   SECCIÓN 5 (Deportes)
+   ======================== */
+
+.seccion5 {
+    background-color: #040714; /* Manteniendo el fondo oscuro de la página */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.contenedor-deportes {
+    max-width: 1050px; /* Alineado con el ancho de las demás secciones */
+    width: 100%;
+}
+
+/* Textos alineados a la izquierda */
+.textos-deportes {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.textos-deportes h2 {
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
+}
+
+.textos-deportes p {
+    color: #c0c0c0; /* Texto gris claro */
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Contenedor de las imágenes */
+.galeria-deportes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes bajen de renglón si no caben */
+    justify-content: center; /* Centra las imágenes de la fila de abajo */
+    gap: 20px; /* Espacio uniforme entre todas las imágenes */
+}
+
+/* Estilo individual de cada tarjeta deportiva */
+.galeria-deportes img {
+    /* El ancho es el 25% menos el espacio del gap para que quepan 4 exactas arriba */
+    width: calc(25% - 15px); 
+    min-width: 220px; /* Evita que se hagan demasiado pequeñas en pantallas chicas */
+    border-radius: 8px; /* Bordes redondeados idénticos a la imagen original */
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* Sombra para dar profundidad */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+    cursor: pointer;
+}
+
+/* Pequeño efecto visual (opcional) para que resalten al pasar el cursor */
+.galeria-deportes img:hover {
+    transform: scale(1.03); 
+}
+
+/* ========================
+   SECCIÓN 6 (Dispositivos)
+   ======================== */
+
+.seccion6 {
+    background-color: #040714; /* Mismo fondo oscuro general */
+    padding: 80px 20px;
+    text-align: center; /* Centra todo el contenido de la sección */
+    color: white;
+}
+
+.contenedor-dispositivos {
+    max-width: 1050px;
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que la imagen y los textos queden en medio */
+}
+
+/* Estilos de los textos */
+.textos-dispositivos {
+    margin-bottom: 50px; /* Separación entre el texto y la imagen */
+}
+
+.textos-dispositivos h2 {
+    font-size: 2.2rem;
+    margin: 0 0 15px 0;
+}
+
+.textos-dispositivos p {
+    font-size: 1.1rem;
+    color: #c0c0c0; /* Tono grisáceo igual al original */
+    margin: 0;
+}
+
+/* Estilos de la imagen de dispositivos */
+.imagen-dispositivos img {
+    max-width: 100%; /* Hace que la imagen se adapte si la pantalla es pequeña */
+    width: 800px; /* Tamaño máximo recomendado para que no se vea desproporcionada */
+    height: auto;
+}
+
+/* ========================
+   SECCIÓN 7 (Footer)
+   ======================== */
+
+.pie-pagina {
+    background-color: #040714; /* Mantiene el fondo oscuro */
+    padding: 30px 20px;
+    border-top: 1px solid #1a1a1a; /* Una línea muy sutil en la parte superior para separar */
+}
+
+.contenedor-footer {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+.contenedor-footer p {
+    color: #8f8f8f; /* Color gris oscuro y sutil */
+    font-size: 0.85rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Mantenemos una fuente limpia */
+    text-align: center;
+}
+
+/* ========================
+   DISEÑO RESPONSIVO (Pantallas menores a 900px)
+   ======================== */
+
+@media (max-width: 900px) {
+    
+    /* --- SECCIÓN 1 (Hero y Formulario) --- */
+    .enc-principal {
+        padding-top: 20px;
+    }
+    
+    .enc-principal h1 {
+        font-size: 28px; /* Reducimos el tamaño del título principal */
+    }
+
+    .formulario {
+        flex-direction: column; /* Apilamos el input y el botón uno sobre otro */
+        gap: 15px; /* Espacio entre ellos */
+        max-width: 100%;
+    }
+
+    .inp-txt {
+        width: 100%;
+        border-radius: 4px; /* Devolvemos el borde redondeado completo */
+        border-right: 1px solid #444; /* Devolvemos el borde derecho */
+    }
+
+    .btn-sub {
+        width: 100%;
+        border-radius: 4px; /* Devolvemos el borde redondeado completo */
+    }
+
+    /* --- SECCIÓN 2 (Fondo Star Wars) --- */
+    .imagen-fondo {
+        height: 350px; /* Reducimos la altura de la imagen para que no ocupe toda la pantalla del celular */
+    }
+
+    .imagen-fondo h3 {
+        font-size: 1.5rem; /* Título más pequeño */
+    }
+
+    /* --- SECCIÓN 4 (Tabla de Planes) --- */
+    /* La tabla ya tiene 'overflow-x: auto', así que se podrá deslizar hacia los lados, 
+       pero reducimos los rellenos para que quepa mejor en pantalla */
+    .tabla-precios th, 
+    .tabla-precios td {
+        padding: 15px 10px;
+        font-size: 0.85rem;
+    }
+
+    .texto-centro {
+        font-size: 0.9rem;
+    }
+
+    .check, .guion {
+        font-size: 1.2rem;
+    }
+
+    /* --- SECCIÓN 5 (Galería de Deportes) --- */
+    .galeria-deportes img {
+        /* En pantallas más pequeñas, pasamos de 4 columnas a 2 columnas */
+        width: calc(50% - 10px); 
+        min-width: 140px;
+    }
+    
+    .textos-deportes h2, 
+    .textos-dispositivos h2 {
+        font-size: 1.8rem; /* Ajuste en los subtítulos de las últimas secciones */
+    }
+}
